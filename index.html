@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aman Kumar - Data Analyst</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="hero">
+            <h1>Aman Kumar</h1>
+            <p>Data Analyst | Turning Data into Insights</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/aman-kumar" target="_blank">LinkedIn: Aman Kumar</a>
+                <a href="https://twitter.com/aman-kumar" target="_blank">Twitter: Aman Kumar</a>
+                <a href="https://github.com/aman-kumar" target="_blank">GitHub: Aman Kumar</a>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill-item">Python</div>
+                <div class="skill-item">SQL</div>
+                <div class="skill-item">Excel</div>
+                <div class="skill-item">Power BI</div>
+                <div class="skill-item">Tableau</div>
+                <div class="skill-item">Statistics</div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-container">
+                <div class="project-item">
+                    <h3>Sales Dashboard</h3>
+                    <p>Built an interactive Power BI dashboard to visualize sales trends and KPIs.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+                <div class="project-item">
+                    <h3>Customer Segmentation</h3>
+                    <p>Used Python and clustering algorithms to segment customers for targeted marketing.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+                <div class="project-item">
+                    <h3>Data Cleaning Pipeline</h3>
+                    <p>Developed a SQL and Python script to clean and preprocess large datasets.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form class="contact-form" onsubmit="return submitForm(event)">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Aman Kumar | Data-Driven Solutions</p>
+    </footer>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            alert('Thank you for reaching out! I’ll get back to you soon.');
+            event.target.reset();
+            return false;
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
